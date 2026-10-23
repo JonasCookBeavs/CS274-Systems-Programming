@@ -1,4 +1,4 @@
-TARGETS= main
+TARGETS= ssdb
 
 .PHONY:	all clean
 
