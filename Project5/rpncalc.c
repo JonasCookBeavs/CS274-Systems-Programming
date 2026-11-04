@@ -9,7 +9,7 @@ void do_operator(float x, float y, char operator, struct stack *top)
     if (operator == '+')
         push(top, x + y);
     if (operator == '-')
-        push(top, x - y);
+        push(top, y - x);
     if (operator == '*')
         push(top, x * y);
     if (operator == '/')
