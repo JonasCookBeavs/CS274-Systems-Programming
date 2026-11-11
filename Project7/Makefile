@@ -1,10 +1,10 @@
 .PHONY: all clean pristine
 
-TARGET := main
+TARGET := runprog
 
 all: $(TARGET)
 
-main: runprog.o cpu.o
+runprog: runprog.o cpu.o
 	g++ -Wall -Wextra -o $@ $^
 
 runprog.o: runprog.cpp cpu.h
