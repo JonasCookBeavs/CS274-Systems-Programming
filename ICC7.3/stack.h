@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Stack
 {
 private:
@@ -6,5 +8,6 @@ private:
 public:
     void push(int value) { stack[++index] = value; };
     int pop() { return stack[index--]; };
-    int peek() { return stack[index]; };
+    void dup() { push(stack[index]); };
+    int prt() { std::cout << stack[index] << "\n"; };
 };
