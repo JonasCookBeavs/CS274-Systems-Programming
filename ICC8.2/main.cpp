@@ -2,16 +2,16 @@
 
 class Animal {
 public:
-    void sound() { std::cout << "Generic animal sound\n"; }
+    virtual void sound() { std::cout << "Generic animal sound\n"; }
     virtual ~Animal() = default;
 };
 
 class Dog : public Animal {
-    void sound() { std::cout << "Woof\n"; }
+    void sound() override { std::cout << "Woof\n"; }
 };
 
 class Cat : public Animal {
-    void sound() { std::cout << "Meow\n"; }
+    void sound() override { std::cout << "Meow\n"; }
 };
 
 void make_sound(Animal &a)
